@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+:root {
+    --primary-color: turquoise;
+    --primary-color-darker: rgb(64, 67, 224);
+    --menu-color: #0A1128;
+
+}
+
+* {
+    box-sizing: border-box;
+    outline: 0;
+    font-size: 62.5%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+
+    background: var(--primary-color);
+}
+
+.container {
+    max-width: 640px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 9em;
+    line-height: 0.3em;
+
+    border-radius: 10px;
+}
+
+form input,
+form label,
+form button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+form input {
+    font-size: 24px;
+    height: 50px;
+    padding: 0 20px;
+}
+
+form input:focus {
+    outline: 1px solid var(--primary-color);
+}
+
+form button {
+    border: none;
+    background: var(--primary-color);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    height: 50px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+form button:hover {
+    background: var(--primary-color-darker);
+}
+
+form button:active {
+    background: green;
+}
+
+.tabelaTopo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    padding: 15px;
+}
+
+/* START MAIN-MENU */
+
+.menu-list {
+    font-family: 'Montserrat', sans-serif;
+
+    position: fixed;
+    top: 5rem;
+    left: 5rem;
+
+    font-size: 0rem;
+    /*Change on click*/
+
+    background: none;
+    /*Change on click*/
+    display: flex;
+    width: 0rem;
+    /*Change on click*/
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
+}
+
+.main-menu ul {
+    display: block;
+    list-style: none;
+}
+
+.main-menu ul li a {
+    text-decoration: none;
+    color: var(--menu-color);
+}
+
+.main-menu a:hover {
+    text-decoration: underline;
+}
+
+.main-menu .close-menu {
+    display: none;
+}
+
+.close-menu-label::after {
+    content: '≡';
+    font-weight: 700;
+    position: fixed;
+    z-index: 2000;
+
+    top: 1rem;
+    left: 2rem;
+
+    background: none;
+    color: var(--menu-color);
+    font-size: 6rem;
+    line-height: 3rem;
+
+    width: 3rem;
+    height: 3rem;
+
+    text-align: center;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.close-menu:checked~.menu-list {
+    font-size: 8rem;
+    width: auto;
+
+    transition-property: all;
+    transition-duration: 300ms;
+}
+
+.menu-list-botoes {
+    font-size: 0rem;
+    width: 0rem;
+
+    transition-property: all;
+    transition-duration: 300ms;
+}
+
+.close-menu:checked~.close-menu-label::after {
+    content: '×';
+}
+
+/* END MAIN-MENU */

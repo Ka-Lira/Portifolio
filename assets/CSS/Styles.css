@@ -1,0 +1,587 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    font-size: 62.5%;
+
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+/* 
+font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif; 
+*/
+body{
+    background: url(../SVG/background-stars.svg);
+    z-index: -100;
+    background-size: cover;
+}
+:root {
+    --primary-color: #0A1128;
+    --light-blue-color: #4F8CFF;
+    --wheat-color: #F1F1E6;
+    --yellow-color: #F0C039;
+
+    --white-color: #FFFFFF;
+    --menu-color: #0A1128;
+
+    --gap: 3rem;
+}
+
+.section {
+    min-height: 100vh;
+    width: 100%;
+}
+
+.scroll-snap {
+    scroll-snap-align: start;
+}
+
+main.photo {
+    display: block;
+    background: url(../IMG/Fundo\ de\ maysa_kalleby_casamento-257\ Removido.png);
+    background-size: cover;
+    background-position-x: 17rem;
+    background-position-y: 0rem;
+
+    background-repeat: no-repeat;
+
+    z-index: 0;
+}
+
+section.svg {
+    height: 100%;
+    width: 100%;
+
+    background-image: url(../SVG/fluid-no-background.svg);
+    display: block;
+    position: absolute;
+    opacity: 1;
+
+    top: 0;
+    left: 0;
+
+    background-size: cover;
+
+    z-index: 1;
+
+}
+
+/* START ARTICLE */
+
+article {
+    position: absolute;
+    top: 20rem;
+    left: 20rem;
+
+    height: clamp(15rem, 50%, 40rem);
+    width: clamp(25rem, 50%, 60rem);
+}
+
+article h2,
+article span {
+    font-size: 10rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    color: var(--white-color);
+}
+
+article span {
+    font-size: 10rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    color: var(--yellow-color);
+}
+
+/* END ARTICLE */
+
+/* START ASIDE */
+
+aside.demonstration {
+    position: absolute;
+    top: 15rem;
+    right: 15rem;
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 25;
+}
+
+aside ul {
+    position: relative;
+    list-style-type: none;
+
+}
+
+aside ul li {
+    text-align: center;
+
+    width: 5rem;
+    height: 5rem;
+
+    font-size: 1rem;
+}
+
+aside ul li a {
+    position: relative;
+    top: 30%;
+
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+
+    display: block;
+
+    font-size: 2rem;
+    font-weight: bold;
+
+    width: 5rem;
+    height: 5rem;
+}
+
+aside ul li:nth-child(8)::after {
+    content: "";
+    content-visibility: hidden;
+    width: 0rem;
+    height: 0rem;
+    position: absolute;
+    background: red;
+    top: -5rem;
+    left: -0.5rem;
+    transform: translateY(0);
+    transition: 0.5s;
+}
+
+aside ul li:nth-child(1):hover~li:nth-child(8)::after {
+    transform: translateY(5rem);
+    content-visibility: visible;
+    width: 0.3rem;
+    height: 5rem;
+}
+
+aside ul li:nth-child(2):hover~li:nth-child(8)::after {
+    transform: translateY(10rem);
+    content-visibility: visible;
+    width: 0.3rem;
+    height: 5rem;
+}
+
+aside ul li:nth-child(3):hover~li:nth-child(8)::after {
+    transform: translateY(15rem);
+    content-visibility: visible;
+    width: 0.3rem;
+    height: 5rem;
+}
+
+aside ul li:nth-child(4):hover~li:nth-child(8)::after {
+    transform: translateY(20rem);
+    content-visibility: visible;
+    width: 0.3rem;
+    height: 5rem;
+}
+
+aside ul li:nth-child(5):hover~li:nth-child(8)::after {
+    transform: translateY(25rem);
+    content-visibility: visible;
+    width: 0.3rem;
+    height: 5rem;
+}
+
+aside ul li:nth-child(6):hover~li:nth-child(8)::after {
+    transform: translateY(30rem);
+    content-visibility: visible;
+    width: 0.3rem;
+    height: 5rem;
+}
+
+aside ul li:nth-child(7):hover~li:nth-child(8)::after {
+    transform: translateY(35rem);
+    content-visibility: visible;
+    width: 0.3rem;
+    height: 5rem;
+}
+
+aside ul li:nth-child(8):hover::after {
+    transform: translateY(40rem);
+    content-visibility: visible;
+    width: 0.3rem;
+    height: 5rem;
+}
+
+
+/* ADITIONAL MINI-SCREEN */
+
+/* .li-show-01 {
+    position: absolute;
+    top: 18rem;
+    right: 25rem;
+
+    aspect-ratio: 16/9;
+    width: 60rem;
+    background: var(--yellow-color);
+
+    z-index: 20;
+
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.li-show-02 {
+    position: absolute;
+    top: 18rem;
+    right: 25rem;
+
+    aspect-ratio: 16/9;
+    width: 60rem;
+    background: var(--yellow-color);
+
+    z-index: 20;
+
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.li-show-03 {
+    position: absolute;
+    top: 18rem;
+    right: 25rem;
+
+    aspect-ratio: 16/9;
+    width: 60rem;
+    background: var(--yellow-color);
+
+    z-index: 20;
+
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+} */
+
+.li-show-04 {
+    position: absolute;
+    top: 18rem;
+    right: 25rem;
+
+    aspect-ratio: 16/9;
+    width: 60rem;
+    background-image: url(../IMG/Photo.png);
+    background-size: cover;
+
+    z-index: 20;
+
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.li-show-05 {
+    position: absolute;
+    top: 18rem;
+    right: 25rem;
+
+    aspect-ratio: 16/9;
+    width: 60rem;
+    background-image: url(../IMG/House.png);
+    background-size: cover;
+
+    z-index: 20;
+
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* .li-show-06 {
+    position: absolute;
+    top: 18rem;
+    right: 25rem;
+
+    aspect-ratio: 16/9;
+    width: 60rem;
+    background: var(--yellow-color);
+
+    z-index: 20;
+
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.li-show-07 {
+    position: absolute;
+    top: 18rem;
+    right: 25rem;
+
+    aspect-ratio: 16/9;
+    width: 60rem;
+    background: var(--yellow-color);
+
+    z-index: 20;
+
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.li-show-08 {
+    position: absolute;
+    top: 18rem;
+    right: 25rem;
+
+    aspect-ratio: 16/9;
+    width: 60rem;
+    background: var(--yellow-color);
+
+    z-index: 20;
+
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+} */
+
+/* END ASIDE */
+
+/* ABOUT SECTION START */
+
+#about {
+    position: relative;
+}
+
+#about h2 {
+    position: absolute;
+    top: 20rem;
+    left: 20rem;
+
+    height: clamp(15rem, 50%, 40rem);
+    width: clamp(25rem, 50%, 60rem);
+}
+
+#about h2,
+#about span {
+    font-size: 10rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    color: var(--white-color);
+}
+
+#about .main-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 40rem;
+}
+
+#about .skills {
+    display: flex;
+    flex-direction: column;
+
+    width: clamp(15rem, 50%, 25rem);
+}
+
+#about .skills img {
+    aspect-ratio: 1/1;
+    height: 13rem;
+}
+
+#about .skills h3 {
+    font-size: 4rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    color: var(--white-color);
+}
+
+#about .skills p {
+    font-size: 1.6rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    color: var(--white-color);
+    text-align: justify;
+}
+
+#about .education {
+    display: flex;
+    flex-direction: column;
+
+    width: clamp(15rem, 50%, 25rem);
+}
+
+#about .education img {
+    aspect-ratio: 1/1;
+    height: 13rem;
+}
+
+#about .education h3 {
+    font-size: 4rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    color: var(--white-color);
+}
+
+#about .education p {
+    font-size: 1.6rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    color: var(--white-color);
+    text-align: justify;
+}
+
+#about .plus {
+    display: flex;
+    flex-direction: column;
+
+    width: clamp(15rem, 50%, 25rem);
+}
+
+#about .plus img {
+    aspect-ratio: 1/1;
+    height: 13rem;
+}
+
+#about .plus h3 {
+    font-size: 4rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    color: var(--white-color);
+}
+
+#about .plus p {
+    font-size: 1.6rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    color: var(--white-color);
+    text-align: justify;
+}
+
+/* ABOUT SECTION END */
+
+/* START FOOTER */
+footer {
+    background: none;
+
+    position: fixed;
+    bottom: 0.9rem;
+    left: 0;
+    right: 0;
+
+    height: 4rem;
+    z-index: 10;
+
+    padding: 0 3rem;
+}
+
+footer div p {
+    float: left;
+    display: block;
+    height: 5rem;
+    background: none;
+    font-size: 2rem;
+}
+
+footer div.logo {
+    display: flex;
+    align-items: center;
+    float: right;
+}
+
+footer div span img {
+    aspect-ratio: 1/1;
+    height: 3rem;
+    display: block;
+    background: none;
+    margin: 0 2rem;
+}
+
+/* END FOOTER */
+
+/* START MAIN-MENU */
+
+.menu-list {
+    font-family: 'Montserrat', sans-serif;
+
+    position: fixed;
+    top: 5rem;
+    left: 5rem;
+
+    font-size: 0rem;
+    /*Change on click*/
+
+    background: none;
+    /*Change on click*/
+    display: flex;
+    width: 0rem;
+    /*Change on click*/
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
+}
+
+.main-menu ul {
+    display: block;
+    list-style: none;
+}
+
+.main-menu ul li a {
+    text-decoration: none;
+    color: var(--menu-color);
+}
+
+.main-menu a:hover {
+    text-decoration: underline;
+}
+
+.main-menu .close-menu {
+    display: none;
+}
+
+.close-menu-label::after {
+    content: url(../svg/menu-icon.svg);
+    font-weight: 700;
+    position: fixed;
+    z-index: 20;
+
+    top: 1rem;
+    left: 2rem;
+
+    background: none;
+    color: var(--menu-color);
+    font-size: 6rem;
+    line-height: 3rem;
+
+    width: 3rem;
+    height: 3rem;
+
+    text-align: center;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.close-menu:checked~.menu-list {
+    font-size: 8rem;
+    width: auto;
+
+    transition-property: all;
+    transition-duration: 300ms;
+}
+
+.menu-list-botoes {
+    font-size: 0rem;
+    width: 0rem;
+
+    transition-property: all;
+    transition-duration: 300ms;
+}
+
+.close-menu:checked~.close-menu-label::after {
+    content: url(../SVG/close-icon.svg);
+}
+
+/* END MAIN-MENU */
