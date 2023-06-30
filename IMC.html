@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Modelo para exercicios</title>
+
+    <link rel="stylesheet" href="./assets/CSS/IMC.css">
+</head>
+
+<body>
+    <menu>
+        <div class="main-menu">
+
+            <input type="checkbox" name="close-menu" id="close-menu" class="close-menu">
+            <label class="close-menu-label" for="close-menu" title="close-menu"></label>
+
+            <ul class="menu-list">
+                <li><a href="./index.html" class="mark-unchecked">Home</a></li>
+                <li><a href="#" class="mark-unchecked">About</a></li>
+                <li><a href="#" class="mark-unchecked">Contact</a></li>
+            </ul>
+        </div>
+    </menu>
+    
+    <section class="container">
+        <h1>Tabela IMC</h1>
+        
+        <section class="tabelaTopo">
+
+            <div class="IMC">
+                <h3>IMC</h3>
+                <p>Menos que 18,5</p>
+                <p>Entre 18,5 e 24,9</p>
+                <p>Entre 25 e 29,9</p>
+                <p>Entre 30 e 34,9</p>
+                <p>Entre 35 e 39,9</p>
+                <p>Mais do que 40</p>
+            </div>
+
+            <div class="resultado">
+                <h3>Resultado</h3>
+                <p>Abaixo do peso</p>
+                <p>Peso Normal</p>
+                <p>Sobrepeso</p>
+                <p>Obesidade grau 1</p>
+                <p>Obesidade grau 2</p>
+                <p>Obesidade grau 3</p>
+            </div>
+
+
+        </section>
+
+        <form action="" class="formulario">
+
+            <label for="peso">Peso:</label>
+            <input type="text" name="peso" id="peso">
+
+            <label for="altura">Altura:</label>
+            <input type="text" name="altura" id="altura">
+
+            <button>Calcular</button>
+
+        </form>
+
+        <form action="">
+            <div class="resultadoIMC"></div>
+        </form>
+    </section>
+
+    <script src="./assets/Js/IMC.js"></script>
+</body>
+
+</html>

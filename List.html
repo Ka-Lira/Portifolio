@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lista de tarefas</title>
+
+    <link rel="stylesheet" href="./assets/CSS/List.css">
+</head>
+
+<body>
+    <menu>
+        <div class="main-menu">
+
+            <input type="checkbox" name="close-menu" id="close-menu" class="close-menu">
+            <label class="close-menu-label" for="close-menu" title="close-menu"></label>
+
+            <ul class="menu-list">
+                <li><a href="./index.html" class="mark-unchecked">Home</a></li>
+                <li><a href="#" class="mark-unchecked">About</a></li>
+                <li><a href="#" class="mark-unchecked">Contact</a></li>
+            </ul>
+        </div>
+    </menu>
+
+    <section class="container">
+        <h1>Lista de tarefas</h1>
+        <p>
+            <input type="text" class="input-tarefa">
+            <button class="btn-tarefa">Adicionar nova tarefa</button>
+        </p>
+
+        <ul class="tarefas"></ul>
+    </section>
+
+    <script src="./assets/Js/List.js"></script>
+</body>
+
+</html>
